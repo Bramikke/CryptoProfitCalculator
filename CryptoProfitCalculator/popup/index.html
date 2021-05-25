@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Crypto profit calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body style="min-width: 300px">
+    <h3>Crypto profit calculator</h3>
+    <form>
+      <label for="investment">Investment</label>
+      <input id="investment" type="number" />
+
+      <label for="ifee">Investment fee</label>
+      <span class="percentage">
+        <input id="ifee" type="number" min="0" max="100" step="0.01" />%
+      </span>
+
+      <label for="initialprice">Initial coin price</label>
+      <input id="initialprice" type="number" />
+
+      <label for="sellingprice">Selling coin price</label>
+      <input id="sellingprice" type="number" />
+
+      <label for="efee">Exit fee</label>
+      <span class="percentage">
+        <input id="efee" type="number" min="0" max="100" step="0.01" />%
+      </span>
+    </form>
+    <div id="flextotal" class="d-flex">
+      <div id="totalprofit"></div>
+      <div id="totaldetails" class="d-flex">
+        <div>
+          <span class="darkwarn">Investment fee:&nbsp</span><br />
+          <span class="darkwarn">Exit fee:&nbsp</span><br />
+          <span>Total:&nbsp</span>
+        </div>
+        <div>
+          <span id="totalifee" class="darkwarn">0.13</span><br />
+          <span id="totalefee" class="darkwarn">0.13</span><br />
+          <span id="total">52.59</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
