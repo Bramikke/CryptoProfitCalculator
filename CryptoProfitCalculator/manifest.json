@@ -1,9 +1,9 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
 
     "name": "Crypto profit calculator",
     "description": "Calculate profit based on coinvalues and fees",
-    "version": "1.0",
+    "version": "1.1",
 
     "permissions": ["storage"],
 
@@ -12,7 +12,7 @@
         "48": "img/icon48.png",
         "128": "img/icon128.png" 
     },
-    "browser_action": {
+    "action": {
         "default_icon": {
             "16": "img/icon16.png",
             "48": "img/icon48.png",
