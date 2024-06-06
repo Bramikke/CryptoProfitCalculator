@@ -59,6 +59,16 @@ function calculateProfit() {
   const elProfitloss = document.getElementById('totalprofit');
   elProfitloss.innerText =
     profitloss >= 0 ? `+${profitloss_string}` : profitloss_string;
+  const elProfitlossPercentage = document.getElementById(
+    'totalprofitpercentage'
+  );
+  elProfitlossPercentage.innerText = `(${profitloss >= 0 ? '+' : ''}${(
+    (profitloss / investment) *
+    100
+  ).toLocaleString(undefined, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}%)`;
   const defaultclass = profitloss >= 0 ? 'success' : 'warn';
   let animation = '';
   if (
@@ -73,6 +83,7 @@ function calculateProfit() {
     prevProfit = profitloss;
   }
   elProfitloss.classList = `${defaultclass} ${animation}`;
+  elProfitlossPercentage.classList = defaultclass;
   elProfitloss.onanimationend = () => {
     elProfitloss.classList = defaultclass;
   };

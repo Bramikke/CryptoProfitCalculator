@@ -1,112 +1,114 @@
 body {
-    font-size: 13px;
-    white-space: nowrap;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin: 0;
+  font-size: 13px;
+  white-space: nowrap;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 0;
 }
 
 h3 {
-    font-family: 'Montserrat',
-        sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #335eb9;
-    margin: 0 0 20px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #335eb9;
+  margin: 0 0 20px 0;
 }
 
 input,
 .percentage {
-    text-align: right;
-    width: 100%;
-    padding: 6px 10px;
-    margin: 4px 0;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: white;
+  text-align: right;
+  width: 100%;
+  padding: 6px 10px;
+  margin: 4px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 .percentage {
-    padding: 6px 20px 6px 10px;
+  padding: 6px 20px 6px 10px;
 }
 
 .percentage input {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    border: none;
-    outline: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
 }
 
 .percentage:focus-within {
-    outline: -webkit-focus-ring-color auto 1px;
+  outline: -webkit-focus-ring-color auto 1px;
 }
 
 .d-flex {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: flex-start;
+}
+
+.d-flex > :first-child {
+  flex-grow: 1;
 }
 
 .d-flex:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 #totalprofit {
-    flex-grow: 1;
-    font-size: 35px;
+  font-size: 35px;
 }
 
 #totaldetails {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 .success {
-    color: green;
+  color: green;
 }
 
 .warn {
-    color: red;
+  color: red;
 }
 
 .darkwarn {
-    color: darkred;
+  color: darkred;
 }
 
 .bounce-up {
-    animation: bounce-up 100ms ease-in-out 200ms 1 forwards;
+  animation: bounce-up 100ms ease-in-out 200ms 1 forwards;
 }
 
 .bounce-down {
-    animation: bounce-down 100ms ease-in-out 200ms 1 forwards;
+  animation: bounce-down 100ms ease-in-out 200ms 1 forwards;
 }
 
 @keyframes bounce-up {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-10px);
-    }
+  50% {
+    transform: translateY(-10px);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounce-down {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(10px);
-    }
+  50% {
+    transform: translateY(10px);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
