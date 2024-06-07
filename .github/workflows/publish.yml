@@ -1,0 +1,24 @@
+name: Publish
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    name: Publish webextension
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Zip extension
+      run: zip -r CryptoProfitCalculator.zip CryptoProfitCalculator
+    - name: Upload & release
+      uses: mnao305/chrome-extension-upload@v5.0.0
+      with:
+        file-path: CryptoProfitCalculator.zip
+        extension-id: eeaopjfgmpffmkghfgcemcaainoiapgb
+        client-id: ${{ secrets.CLIENT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        refresh-token: ${{ secrets.REFRESH_TOKEN }}
+            
