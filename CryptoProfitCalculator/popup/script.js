@@ -1,6 +1,7 @@
 let prevProfit = 0;
 
 function init() {
+  pinWindowListener();
   chrome.storage.local.get(
     {
       investment: '',
@@ -105,6 +106,24 @@ function calculateProfit() {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
+}
+
+function pinWindowListener() {
+  const btnPin = document.getElementById('btnPin');
+  if (window.name === 'CryptoProfitCalculator') {
+    btnPin.remove();
+    return;
+  }
+  btnPin.addEventListener('click', openExternally);
+}
+
+function openExternally() {
+  window.open(
+    chrome.runtime.getURL('popup/index.html'),
+    'CryptoProfitCalculator',
+    'width=350,height=450'
+  );
+  window.close(); // close the Chrome extension pop-up
 }
 
 init();
