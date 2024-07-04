@@ -3,7 +3,7 @@
 
   "name": "Crypto profit calculator",
   "description": "Calculate profit based on coinvalues and fees",
-  "version": "1.3",
+  "version": "1.4",
 
   "permissions": ["storage"],
 
